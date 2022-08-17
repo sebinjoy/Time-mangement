@@ -1,0 +1,712 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+<div class="task-manager">
+  <div class="left-bar">
+    <div class="upper-part">
+      <div class="actions">
+        <div class="circle"></div>
+        <div class="circle-2"></div>
+      </div>
+    </div>
+    <div class="left-content">
+      <ul class="action-list">
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-inbox"
+            viewBox="0 0 24 24">
+            <path d="M22 12h-6l-2 3h-4l-2-3H2" />
+            <path
+              d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+          </svg>
+          <span>Inbox</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-star">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          <span> Today</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-calendar"
+            viewBox="0 0 24 24">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+            <path d="M16 2v4M8 2v4m-5 4h18" />
+          </svg>
+          <span>Upcoming</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-hash">
+            <line x1="4" y1="9" x2="20" y2="9" />
+            <line x1="4" y1="15" x2="20" y2="15" />
+            <line x1="10" y1="3" x2="8" y2="21" />
+            <line x1="16" y1="3" x2="14" y2="21" /></svg>
+          <span>Important</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-users">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+          <span>Meetings</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-trash"
+            viewBox="0 0 24 24">
+            <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          </svg>
+          <span>Trash</span>
+        </li>
+      </ul>
+      <ul class="category-list">
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-users">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+          <span>Family</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-sun"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <span>Vacation</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-trending-up">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+            <polyline points="17 6 23 6 23 12" /></svg>
+          <span>Festival</span>
+        </li>
+        <li class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-zap">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
+          <span>Concerts</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="header">Today Tasks</div>
+    <div class="content-categories">
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-1">
+        <label class="category" for="opt-1">All</label>
+      </div>
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-2" checked>
+        <label class="category" for="opt-2">Important</label>
+      </div>
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-3">
+        <label class="category" for="opt-3">Notes</label>
+      </div>
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-4">
+        <label class="category" for="opt-4">Links</label>
+      </div>
+    </div>
+    <div class="tasks-wrapper">
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-1" checked>
+        <label for="item-1">
+          <span class="label-text">Dashboard Design Implementation</span>
+        </label>
+        <span class="tag approved">Approved</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-2" checked>
+        <label for="item-2">
+          <span class="label-text">Create a userflow</span>
+        </label>
+        <span class="tag progress">In Progress</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-3">
+        <label for="item-3">
+          <span class="label-text">Application Implementation</span>
+        </label>
+        <span class="tag review">In Review</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-4">
+        <label for="item-4">
+          <span class="label-text">Create a Dashboard Design</span>
+        </label>
+        <span class="tag progress">In Progress</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-5">
+        <label for="item-5">
+          <span class="label-text">Create a Web Application Design</span>
+        </label>
+        <span class="tag approved">Approved</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-6">
+        <label for="item-6">
+          <span class="label-text">Interactive Design</span>
+        </label>
+        <span class="tag review">In Review</span>
+      </div>
+      <div class="header upcoming">Upcoming Tasks</div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-7">
+        <label for="item-7">
+          <span class="label-text">Dashboard Design Implementation</span>
+        </label>
+        <span class="tag waiting">Waiting</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-8">
+        <label for="item-8">
+          <span class="label-text">Create a userflow</span>
+        </label>
+        <span class="tag waiting">Waiting</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-9">
+        <label for="item-9">
+          <span class="label-text">Application Implementation</span>
+        </label>
+        <span class="tag waiting">Waiting</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-10">
+        <label for="item-10">
+          <span class="label-text">Create a Dashboard Design</span>
+        </label>
+        <span class="tag waiting">Waiting</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-bar">
+    <div class="top-part">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-users">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+      <div class="count">6</div>
+    </div>
+    <div class="header">Schedule</div>
+    <div class="right-content">
+      <div class="task-box yellow">
+        <div class="description-task">
+          <div class="time">08:00 - 09:00 AM</div>
+          <div class="task-name">Product Review</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img
+            src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+            alt="member">
+          <img
+            src="https://images.unsplash.com/photo-1476657680631-c07285ff2581?ixlib=rb-1.2.1&auto=format&fit=crop&w=2210&q=80"
+            alt="member-2">
+          <img
+            src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+            alt="member-3">
+          <img
+            src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
+            alt="member-4">
+        </div>
+      </div>
+      <div class="task-box blue">
+        <div class="description-task">
+          <div class="time">10:00 - 11:00 AM</div>
+          <div class="task-name">Design Meeting</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img
+            src="https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixlib=rb-1.2.1&auto=format&fit=crop&w=2230&q=80"
+            alt="member">
+          <img
+            src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+            alt="member-2">
+          <img
+            src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
+            alt="member-3">
+        </div>
+      </div>
+      <div class="task-box red">
+        <div class="description-task">
+          <div class="time">01:00 - 02:00 PM</div>
+          <div class="task-name">Team Meeting</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img
+            src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+            alt="member">
+          <img
+            src="https://images.unsplash.com/photo-1475552113915-6fcb52652ba2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80"
+            alt="member-2">
+          <img
+            src="https://images.unsplash.com/photo-1493752603190-08d8b5d1781d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
+            alt="member-3">
+          <img
+            src="https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixlib=rb-1.2.1&auto=format&fit=crop&w=2230&q=80"
+            alt="member-4">
+        </div>
+      </div>
+      <div class="task-box green">
+        <div class="description-task">
+          <div class="time">03:00 - 04:00 PM</div>
+          <div class="task-name">Release Event</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img
+            src="https://images.unsplash.com/photo-1523419409543-a5e549c1faa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=943&q=80"
+            alt="member">
+          <img
+            src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=881&q=80"
+            alt="member-2">
+          <img
+            src="https://images.unsplash.com/photo-1521122872341-065792fb2fa0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2208&q=80"
+            alt="member-3">
+          <img
+            src="https://images.unsplash.com/photo-1486302913014-862923f5fd48?ixlib=rb-1.2.1&auto=format&fit=crop&w=3400&q=80"
+            alt="member-4">
+          <img
+            src="https://images.unsplash.com/photo-1484187216010-59798e9cc726?ixlib=rb-1.2.1&auto=format&fit=crop&w=955&q=80"
+            alt="member-5">
+        </div>
+      </div>
+      <div class="task-box blue">
+        <div class="description-task">
+          <div class="time">08:00 - 09:00 PM</div>
+          <div class="task-name">Release Event</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img
+            src="https://images.unsplash.com/photo-1523419409543-a5e549c1faa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=943&q=80"
+            alt="member">
+          <img
+            src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=881&q=80"
+            alt="member-2">
+          <img
+            src="https://images.unsplash.com/photo-1521122872341-065792fb2fa0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2208&q=80"
+            alt="member-3">
+          <img
+            src="https://images.unsplash.com/photo-1486302913014-862923f5fd48?ixlib=rb-1.2.1&auto=format&fit=crop&w=3400&q=80"
+            alt="member-4">
+          <img
+            src="https://images.unsplash.com/photo-1484187216010-59798e9cc726?ixlib=rb-1.2.1&auto=format&fit=crop&w=955&q=80"
+            alt="member-5">
+        </div>
+      </div>
+      <div class="task-box yellow">
+        <div class="description-task">
+          <div class="time">11:00 - 12:00 PM</div>
+          <div class="task-name">Practise</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img
+            src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+            alt="member">
+          <img
+            src="https://images.unsplash.com/photo-1476657680631-c07285ff2581?ixlib=rb-1.2.1&auto=format&fit=crop&w=2210&q=80"
+            alt="member-2">
+          <img
+            src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+            alt="member-3">
+          <img
+            src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
+            alt="member-4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- second -->
+<div class="dashboard">
+  <div class="left">
+    <div class="sidebar">
+      <div class="wrapper">
+        <div class="menu">
+          <img src="https://i.ibb.co/B4Dn7CT/menu.png" />
+        </div>
+        <div class="items">
+          <img src="https://i.ibb.co/L8D5T60/light.png" />
+          <img src="https://i.ibb.co/zmDbMVZ/diamond.png" />
+          <img src="https://i.ibb.co/W5QZ9Fk/envelope.png" />
+          <img src="https://i.ibb.co/CnKDBxC/flask.png" />
+          <img src="https://i.ibb.co/MGs4Fyn/sent-mail.png" />
+          <img src="https://i.ibb.co/zGtDpcp/map.png" />
+        </div>
+        <div class="profile">
+          <img src="https://www.seekclipart.com/clipng/middle/103-1032140_graphic-transparent-1-vector-flat-small-user-icon.png" />
+        </div>
+      </div>
+    </div>
+    <div class="navigation">
+      <div class="wrapper2">
+        <div class="abilan">
+          <img src="https://i.ibb.co/HgJrt1p/abilan.png" />
+        </div>
+        <button class="compose">Compose Mail
+          <span class="plus">
+            <img src="https://i.ibb.co/v1HxGWj/add-1.png" /></span></button>
+        <div class="folders">Folders</div>
+        <div class="folder-icons">
+          <div class="icon1">
+            <img src="https://i.ibb.co/qdgf3TJ/envelope.png" />
+          </div>
+          <div class="icon-name1">Inbox
+            <button class="buton-span"> 20
+            </button>
+          </div>
+        </div>
+        <div class="folder-icons">
+          <div class="icon1">
+            <img src="https://i.ibb.co/2yLfX9W/sent-mail.png" />
+          </div>
+          <div class="icon-name">Send Mail</div>
+        </div>
+        <div class="folder-icons">
+          <div class="icon1">
+            <img src="https://i.ibb.co/6ZH9kK3/star.png" />
+          </div>
+          <div class="icon-name">Important</div>
+        </div>
+        <div class="folder-icons">
+          <div class="icon1">
+            <img src="https://i.ibb.co/z4QhcbD/email.png" />
+          </div>
+          <div class="icon-name">Draft</div>
+        </div>
+        <div class="folder-icons">
+          <div class="icon1">
+            <img src="https://i.ibb.co/3MzfGDF/bug.png" />
+          </div>
+          <div class="icon-name">Spam</div>
+        </div>
+        <div class="folder-icons">
+          <div class="icon1">
+            <img src="https://i.ibb.co/xfcFLCN/waste-bin.png" />
+          </div>
+          <div class="icon-name">Trash</div>
+        </div>
+        <div class="folders">
+          Online Friends
+        </div>
+        <div class="folder-icons">
+          <div class="avatar">
+            <div class="online">
+            </div>
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" />
+          </div>
+          <div class="names">Don Allen
+          </div>
+
+        </div>
+        <div class="folder-icons">
+          <div class="avatar">
+            <div class="online">
+            </div>
+            <img src="https://randomuser.me/api/portraits/women/71.jpg" />
+          </div>
+          <div class="names">Aaron Tim</div>
+        </div>
+        <div class="folder-icons">
+          <div class="avatar">
+            <div class="online red">
+            </div>
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" />
+          </div>
+          <div class="names">Jack Joe</div>
+        </div>
+        <div class="folders">
+          Labels
+        </div>
+        <div class="section1">
+          <button class="btn buton1"> Important
+            <span class="tag">
+              <img src="https://i.ibb.co/Zdx3jGx/tag.png" /></span>
+          </button>
+
+          <button class="btn buton2"> New
+            <span class="tag">
+              <img src="https://i.ibb.co/N1SMfgQ/tag.png" /></span>
+          </button>
+        </div>
+        <div class="section2">
+          <button class="btn buton3"> Old
+            <span class="tag">
+              <img src="https://i.ibb.co/C5q0MDM/tag.png" /></span>
+          </button>
+          <button class="btn buton4"> Priority
+            <span class="tag">
+              <img src="https://i.ibb.co/DMmSZW0/tag.png" /></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="right-header">
+      <div class="top-bar">
+        <div class="top-bar-justify">
+          <div class="big-inbox">
+            Inbox
+          </div>
+
+          <div class="top-bar-items">
+            <div class="notif">
+              <div class="online pink">
+              </div>
+              <img src="https://i.ibb.co/VJm73Hz/notifications-button.png" />
+            </div>
+            <img src="https://i.ibb.co/vz4HYJb/envelope.png" />
+            <img src="https://i.ibb.co/52Vkq4M/earth-globe.png" />
+            <div class="icon-name5"> English </div>
+          </div>
+        </div>
+        <div class="profile2">
+          <img src="https://www.seekclipart.com/clipng/middle/103-1032140_graphic-transparent-1-vector-flat-small-user-icon.png" />
+          <div class="icon-name5">Larry Nunez</div>
+        </div>
+      </div>
+      <hr class="new-hr">
+      <div class="right-bottom">
+        <div class="check">
+          <label class="checkbox">
+            <input type="checkbox" />
+          </label>
+          <div class="down-arrow">
+            <img src="https://i.ibb.co/WDqrXj6/drop-down-arrow.png" />
+          </div>
+        </div>
+        <div class="middle-buttons">
+          <div class="buttons">
+            <button class="new button">
+              <img src="https://i.ibb.co/X4j3TZR/reload.png" />
+            </button>
+            <button class="new button">
+              <img src="https://i.ibb.co/L60Yr87/eye.png" />
+            </button>
+            <button class="new button">
+              <img src="https://i.ibb.co/Lv6TqBG/waste-bin.png" />
+            </button>
+          </div>
+          <div class="form has-search">
+            <input class="text" type="search" placeholder="Search here..." name="search" />
+            <span class="searchIcon">
+              <img src="https://i.ibb.co/sqFgRq8/search.png" />
+            </span>
+          </div>
+        </div>
+        <div class="search-arrow">
+          <img src="https://i.ibb.co/cx2t05H/scroll-arrows.png" />
+        </div>
+      </div>
+    </div>
+    <div class="right-body">
+      <div class="scroll-cards">
+        <div class="card">
+          <div class="mails">
+            <img src="https://randomuser.me/api/portraits/men/20.jpg" />
+            <div class="mail-names">
+              Louis Adkins
+            </div>
+
+          </div>
+          <div class="mail-info">
+            How To Write Better Advertising Copy Heading
+          </div>
+          <div>
+          </div>
+          <div class="bottom-info">
+            <div class="check1">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+              <div class="star">
+                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
+              </div>
+              <div class="star">
+                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
+              </div>
+
+            </div>
+            <div class="date">8:30 AM</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="mails">
+            <span class="person border1"> C</span>
+            <div class="mail-names">
+              Clarence Hogan
+            </div>
+
+          </div>
+          <div class="mail-info">
+            How To Write Better Advertising
+
+          </div>
+          <div>
+          </div>
+          <div class="bottom-info">
+            <div class="check1">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+              <div class="star">
+                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
+              </div>
+              <div class="star">
+                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
+              </div>
+
+            </div>
+            <div class="date">8:30 AM</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="mails">
+            <span class="person border2">O</span>
+            <div class="mail-names">
+              Olga Boone
+            </div>
+
+          </div>
+          <div class="mail-info">
+            Old Fashioned Recipe
+          </div>
+          <div>
+          </div>
+          <div class="bottom-info">
+            <div class="check1">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+              <div class="star">
+                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
+              </div>
+              <div class="star">
+                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
+              </div>
+
+            </div>
+            <div class="date">8:30 AM</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="mails">
+            <span class="person border3">H</span>
+            <div class="mail-names">
+              Harry Burton
+            </div>
+
+          </div>
+          <div class="mail-info">
+            How To Write Better Advertising Copy Heading
+          </div>
+          <div>
+          </div>
+          <div class="bottom-info">
+            <div class="check1">
+              <label class="checkbox">
+                <input type="checkbox" />
+              </label>
+              <div class="star">
+                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
+              </div>
+              <div class="star">
+                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
+              </div>
+
+            </div>
+            <div class="date">8:30 AM</div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="message">
+        <div class="mes-date">
+          Dec 1, 2018
+        </div>
+        <div class="title">
+          Old Fashioned Recipe For Preventing Allergies And Chemical
+          <div class="title-icons">
+
+          </div>
+        </div>
+        <div class="from">
+          <span class="who">From: </span>ashraf@glaze.com
+        </div>
+        <div class="message-from">
+          Hello Malikan!
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptas pariatur repellat veritatis atque, tempora quasi quas facere impedit aliquam libero qui iure cumque incidunt facilis soluta necessitatibus laboriosam nemo. Delectus architecto
+            sed, excepturi natus iste vel quidem officia corrupti repudiandae!</p>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, deleniti eaque eligendi minus maxime tempora eiusi.</p>
+          <p>Have a nice day</p>
+          <p>Ashraf</p>
+        </div>
+        <div class="attachment-last">
+          <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
+          <div class="att-write">
+            Attachment (80MB)
+          </div>
+          <button class="btn1 buton0"> View All
+          <span class="tag"></span>
+          </button>
+          
+          <button class="btn1 buton9"> Download All
+          </button>
+
+        </div>
+        <div class="son-images">
+          <div class="inside-img">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
+            <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
+            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
+            <img src="https://images.unsplash.com/photo-1450609283058-0ec52fa7eac4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
+
+          </div>
+          <button class="son-buton"> 20+
+          </button>
+        </div>
+        <button class="btn2 butona"> Reply
+          <span class="tag">
+            <img src="https://i.ibb.co/GQf8frw/reply.png" />
+          </span>
+        </button>
+
+        <button class="btn2 butonb"> Forward
+          <span class="tag">
+            <img src="https://i.ibb.co/6W40kTg/forward-arrow.png" />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>

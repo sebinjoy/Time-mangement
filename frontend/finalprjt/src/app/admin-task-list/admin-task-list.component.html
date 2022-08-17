@@ -1,0 +1,68 @@
+
+
+
+
+
+<div class="container mt-4">
+ <table class="table table-striped  myclas">
+    <thead>
+        <tr>
+            <th>Task Id</th>
+            <th>Task Name</th>
+            <th> Detail View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of tasklist">
+            <td>{{item.t_id}}</td>
+            <td>{{item.t_name}}</td>
+             <th><button type="submit" (click)="onselect(item)" class="btn btn-dark" >Click Here</button></th>
+        </tr>
+    </tbody>
+ </table>
+
+</div>
+
+
+<div class="container" *ngIf="!isDisplay">
+<h2  align="center "> User Task Detail View </h2>
+<table class="table  table-striped mt-5"  >
+    <thead> 
+        <tr >
+            <th>Task Id</th>
+            <th>Task Name</th>
+            <th>Task Status</th>
+            <th>Start time</th>
+            <th>End time</th>
+            <th>Created Date</th>
+            <th>approval status</th>
+            <th>Assigned manager</th>
+            <th>task Description</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngIf="selitem">
+            <td>{{selitem.t_id}}</td>
+            <td>{{selitem.t_name}}</td>
+            <td>{{selitem.t_status}}</td>
+            <td>{{selitem.start_Time}}</td>
+            <td>{{selitem.end_Time}}</td>
+            <td>{{selitem.created_Date}}</td>
+            <td>{{selitem.approval_Status}}</td>
+            <td>{{selitem.assigned_Manager}}</td>
+            <td>{{selitem.task_Description}}</td>
+        </tr>
+    </tbody>
+ </table>
+</div>
+
+
+
+               
+             
+           
+           
+        
+    
+ 
+

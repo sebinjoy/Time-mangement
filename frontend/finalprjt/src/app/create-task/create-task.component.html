@@ -1,0 +1,95 @@
+
+<body>
+  <div class="container ms-4  me-4">
+          <h2 class="  text-center fw-bold">ADD TASK</h2>
+          
+          <section>
+            
+            <div class="form">
+              <form [formGroup]="formValue">
+            
+                  <div class="mb-3">
+                      <label for="task_name" class="form-label">Task name</label>
+                      <input type="text" class="form-control" id="name" formControlName="t_name">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="task_id" class="form-label">Task id</label>
+                      <input type="number" class="form-control" id="task_id" formControlName="t_id">
+                     
+                    </div>
+                    <div class="mb-3">
+                      <label for="task_status" class="form-label">Task status</label>
+                      <input type="text" class="form-control" id="task_status" formControlName="t_status">
+                      </div>
+                    <div class="mb-3">
+                      <label for="start_time" class="form-label">Start time</label>
+                      <input type="time" class="form-control" id="start_time" formControlName="start_Time">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="end_time" class="form-label">End time</label>
+                      <input type="time" class="form-control" id="end_time" formControlName="end_Time">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="created_date" class="form-label">Created date</label>
+                      <input type="date" class="form-control" id="created_date" formControlName="created_Date">
+                       
+                    </div>
+                    <!-- <div class="mb-3">
+                      <label for="approval_status" class="form-label">Approval_status</label>
+                      <input type="text" class="form-control" id="approval_status" formControlName="approval_Status">
+           
+                    </div> -->
+                    <div class="mb-3">
+                      <label for="assigned_manager" class="form-label">Assigned manager</label>
+                      <input type="text" class="form-control" id="assigned_manager" formControlName="assigned_Manager">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="task_description" class="form-label">Task description</label>
+                      <input type="text" class="form-control" id="task_description" formControlName="task_Description">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <button type="submit"  class="btn btn-primary ms-5" (click)="add()" >Submit</button>
+                      <button type="submit"  class="btn btn-secondary ms-1" [routerLink]="['/userdash']" >Back</button>
+                    </div>
+                 
+                  
+              </form>
+
+            </div>
+          </section>
+  </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

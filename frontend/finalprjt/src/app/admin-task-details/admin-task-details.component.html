@@ -1,0 +1,59 @@
+ <div class="container mt-4">
+<h2 align="center ">Task Details</h2>
+<button type="submit"  class="btn btn-dark mb-2" [routerLink]="['/home']" >Back to Dashboard</button>
+
+
+
+<div *ngIf="taskById">
+    <form #approveTask="ngForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-12">
+            <label  class="label label-default mb-2" > select Approval Status</label>
+        </div>
+        <div class="col-12">
+            <select name="approval_Status" class="form-control input-size" #approval_Status ="ngModel"  [(ngModel)]="taskById.approval_Status" required>
+              <option value="Approved">Approve</option>
+              <option value="Rejected">Reject</option>
+            </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<table  class="table table-primary table-secondary table-striped mt-3">
+    <thead>
+        <tr>
+            <th>TASK ID</th>
+            <th>TASK NAME</th>
+            <th>TASK STATUS</th>
+            <th>START TIME</th>
+            <th>END TIME</th>
+            <th>CREATED DATE</th>
+            <th>APPROVAL STATUS</th>
+            <!-- <th>ASSIGNED MANAGER</th>
+            <th>TASK DESCRIPTION</th> -->
+            
+            <th> Click Here to Accept/Reject </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of tasklist | pipe: searchTerm; index as i">
+            <!-- <td scope="row">{{ i + 1 }}</td> -->
+           <td>{{dataItem.t_id}}</td>
+           <td>{{dataItem.t_name}}</td>
+           <td>{{dataItem.t_status}}</td>
+           <td>{{dataItem.start_Time}}</td>
+           <td>{{dataItem.end_Time}}</td>
+           <td>{{dataItem.created_Date}}</td>
+           <td>{{dataItem.approval_Status}}</td>
+           <!-- <td>{{dataItem.assigned_Manager}}</td>
+           <td>{{dataItem.task_Description}}</td> -->
+           <td><button type="button" class="btn btn-outline-danger" (click)="action(dataItem.t_id)">Accept/Reject</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,145 @@
+<p>demo works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE</title>
+</head>
+
+<body>
+    <!--User Table-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">User Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Add User Details-->
+            <div class="d-flex">
+                <button class="btn btn-success" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                    User</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Task name</th>
+                <th>Task ID</th>
+                <th>Status</th>
+                <th>Start time</th>
+                <th>End time</th>
+                <th>Created date</th>
+                <th>Approval status</th>
+                <th>Assigned manager</th>
+                <th>Task Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tasklist">
+                <td>{{item.t_name}}</td>
+                <td>{{item.t_id}}</td>
+                <td>{{item.t_status}}</td>
+                <td>{{item.start_Time}}</td>
+                <td>{{item.end_Time}}</td>
+                <td>{{item.created_Date}}</td>
+                <td>{{item.approval_Status}}</td>
+                <td>{{item.assigned_Manager}}</td>
+                <td>{{item.task_Description}}</td>  
+                <td>
+                    <!--Edit and Delete User Fields-->
+                    <!-- <input type="button" value="Edit" (click)="EditUser(item)" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" class="btn btn-success me-2">
+                    <input type="button" value="Delete" (click)="DeleteUser(item)" class="btn btn-danger"> -->
+                </td>
+            </tr>  
+        </tbody>
+    </table> 
+
+
+    <!-- Button trigger modal -->
+
+
+    <!--Popup Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">USER REGISTRATION</h5>
+                    <!--Close Button-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--User Registration Form-->
+                    <form class="row g-3" >
+
+                        <div class="col-md-6">
+                            <label for="inputtask_name" class="form-label">Task name</label>
+                            <input type="text" formControlName="t_name" class="form-control" id="inputtask_name">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="inputtask_id" class="form-label">Task ID</label>
+                            <input type="text" class="form-control" formControlName="t_id" id="inputtask_id">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputtask_status" class="form-label">Status</label>
+                            <input type="text" formControlName="task_Status" class="form-control" id="inputtask_status">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputstart_time" class="form-label">Start time</label>
+                            <input type="time" formControlName="start_Time" class="form-control" id="inputstart_time">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputend_time" class="form-label">End time</label>
+                            <input type="time" formControlName="end_Time" class="form-control" id="inputend_time">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputcreated_date" class="form-label">Created date</label>
+                            <input type="date" formControlName="created_Date" class="form-control" id="inputcreated_date">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputapproval_status" class="form-label">Approval status</label>
+                            <input type="text" formControlName="approval_Status" class="form-control" id="inputapproval_status">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputassigned_manager" class="form-label">Assigned manager</label>
+                            <input type="text" formControlName="assigned_Manager" class="form-control" id="inputassigned_manager">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputtask_description" class="form-label">Task Description</label>
+                            <input type="text" formControlName="task_Description" class="form-control" id="inputtask_description">
+                        </div>
+
+                    </form>
+                    <!--Form Ends-->
+                </div>
+                <div class="modal-footer">
+                    <!--Close Button-->
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                    <!--Save Button-->
+                    <!-- <button *ngIf="btnSaveShow" type="button" class="btn btn-primary" id="closeModal" data-bs-dismiss="modal" (click)="AddUser()" >Register</button>  -->
+                    <!--Update Button-->
+                    <!-- <button *ngIf="btnUpdateShow" type="button" class="btn btn-primary" id="closeModal"
+                        data-bs-dismiss="modal" (click)="UpdateUser()">Update</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
